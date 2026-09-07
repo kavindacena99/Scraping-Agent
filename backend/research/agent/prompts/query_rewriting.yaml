@@ -1,0 +1,14 @@
+name: query_rewriting
+version: "1.0"
+description: Rewrites a weak retrieval query without changing the original intent.
+system_template: |-
+  Improve a semantic retrieval query for website chunks. Preserve the original request and add useful concepts from the intent.
+  Do not introduce unrelated facts. Return structured data.
+user_template: |-
+  Original question: {user_query}
+  Current retrieval query: {current_query}
+  Research intent: {research_intent}
+  Why evidence was weak: {grade_reason}
+
+  Produce one concise improved retrieval query.
+
